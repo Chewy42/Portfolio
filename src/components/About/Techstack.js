@@ -12,10 +12,8 @@ import {
 import {
   SiPytorch,
   SiFirebase,
-  SiNextdotjs,
   SiCsharp,
   SiTailwindcss,
-  SiJetbrains,
   SiUnity,
   SiMicrosoftoffice,
   SiUnrealengine,
