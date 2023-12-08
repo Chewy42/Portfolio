@@ -2,15 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
 import authorcopilotscript from "../../Assets/Projects/authorcopilotscript.png";
 import authorcopilot from "../../Assets/Projects/authorcopilot.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import NavBar from "../Navbar";
 
 function Projects() {
   return (
+    <div>
+      <NavBar/>
     <Container fluid className="project-section">
       <Particle />
       <Container>
@@ -21,13 +20,14 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card flex flex-col justify-center align-middle">
             <ProjectCard
               imgPath={authorcopilot}
               isBlog={false}
               title="Author Copilot"
               description="Software as a service utilizing GPT-3.5-turbo and GPT-4 to allow anyone to create en entire eBook in 10 minutes. The process is streamlined and formatted in HTML (with prompt engineering) to export as a .epub file and be instantly useable"
               ghLink="https://github.com/Chewy42/Author-Copilot"
+              demoLink="/acdemo"
             />
           </Col>
 
@@ -43,6 +43,7 @@ function Projects() {
         </Row>
       </Container>
     </Container>
+    </div>
   );
 }
 

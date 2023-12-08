@@ -6,9 +6,12 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import NavBar from "../Navbar";
 
-function About() {
+const About = () => {
   return (
+    <div>
+    <NavBar/>
     <Container fluid className="about-section">
       <Particle />
       <Container>
@@ -22,7 +25,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+              Get To <strong className="purple">Know Me</strong>
             </h1>
             <Aboutcard />
           </Col>
@@ -48,6 +51,7 @@ function About() {
         <Github />
       </Container>
     </Container>
+    </div>
   );
 }
 

@@ -31,7 +31,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 50;
   background-color: #0c0513;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
@@ -163,9 +163,16 @@ button:focus {
   color: white !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-}
-
-.nav-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: auto;
+  margin: 0 0.25rem;
+  .selector {
+    position: left;
+    z-index: -1;
+    transition: all 0.3s ease-out 0s;
+  }
   padding: 0.8rem 1rem !important;
 }
 
@@ -177,10 +184,11 @@ button:focus {
 
 .navbar-nav .nav-item {
   position: relative;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .navbar-nav .nav-item a {
+  text-align: center;
   font-weight: 400;
   transition: all 0.3s ease-out 0s;
   position: relative;
@@ -189,13 +197,13 @@ button:focus {
 
 .navbar-nav .nav-item a::after {
   content: "";
-  position: relative;
+  position: absolute;
   display: block;
   height: 5px;
   width: 0;
   border-radius: 16px;
   background: #c95bf5;
-  bottom: 1px;
+  bottom: -5px;
   left: 0;
   z-index: -1;
   transition: all 0.3s ease-out 0s;
@@ -248,6 +256,7 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .home-header {
@@ -256,7 +265,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -282,6 +291,11 @@ button:focus {
 
 .main-name {
   color: #cd5ff8;
+}
+
+.down-arrow:hover {
+  cursor: pointer !important;
+  z-index: 100;
 }
 
 .Typewriter__wrapper {
@@ -344,18 +358,21 @@ button:focus {
 
 .home-about-social-links {
   justify-content: center !important;
+  align-items: center !important;
   padding-top: 15px !important;
-  display: inline-block !important;
+  display: flex !important;
   position: relative !important;
   padding-inline-start: 0 !important;
 }
 
 .home-social-icons {
   position: relative !important;
-  display: inline-block !important;
+  display: flex !important;
   width: 40px !important;
   height: 40px !important;
   text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
   background: rgba(255, 255, 255, 0.972) !important;
@@ -389,9 +406,9 @@ button:focus {
 }
 
 .social-icons {
-  display: inline-block !important;
   padding-right: 15px;
   padding-left: 15px;
+  margin: auto;
 }
 
 .icon-colour {
@@ -567,7 +584,7 @@ button:focus {
 
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 15px !important;
   }
 }
 
@@ -577,8 +594,8 @@ button:focus {
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 .tech-icon-images {
-  padding: 20px !important;
   line-height: 1.6 !important;
+  margin: auto;
 }
 
 .quote-card-view {

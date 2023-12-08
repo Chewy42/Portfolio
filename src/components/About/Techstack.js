@@ -25,50 +25,50 @@ import {
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+      <Col xs={4} md={2} className="tech-icons" >
+        <CgCPlusPlus className="m-auto py-2" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp />
+        <SiCsharp className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <DiJavascript1 className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <DiNodejs className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiReact className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiUnity />
+        <SiUnity className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiUnrealengine />
+        <SiUnrealengine className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <DiMongodb className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <DiGit className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiQt />
+        <SiQt className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
+        <SiFirebase className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
+        <DiPython className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
+        <SiPytorch className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiTailwindcss />
+        <SiTailwindcss className="m-auto py-2"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiMicrosoftoffice />
+        <SiMicrosoftoffice className="m-auto py-2"/>
       </Col>
     </Row>
   );

@@ -61,24 +61,24 @@ function Home2() {
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <ul className="home-about-social-links">
-              <li className="social-icons">
+              <li className="flex justify-center align-middle w-10 ml-3 hover:cursor-pointer z-[100]">
                 <a
                   href="https://github.com/Chewy42"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
-                  <AiFillGithub />
+                  <AiFillGithub className="m-auto text-center" />
                 </a>
               </li>
-              <li className="social-icons">
+              <li className="flex justify-center align-middle w-10 ml-3 hover:cursor-pointer z-[101]">
                 <a
                   href="https://www.linkedin.com/in/Chewy42/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
-                  <FaLinkedinIn />
+                  <FaLinkedinIn className="m-auto text-center" />
                 </a>
               </li>
             </ul>

@@ -7,24 +7,16 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Matthew Favela </span>
-            from <span className="purple"> Oahu, Hawaii.</span>
-            <br />I am a sophomore pursing a B.S. in Data Science at Chapman University 
-            with a minor in Game Development Programming
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
-          </p>
+        <br />I am currently a Junior pursing a <span className="purple">B.S. in Data Science at Chapman University with a minor in Game Development Programming</span>. In the future, I also plan on pursuing a Masters Degree in Electrical Engineering and Computer Science (EECS) at Chapman University.
           <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
+            <li className="about-activity flex">
+              <ImPointRight className="mr-2 mt-1" />Playing Video Games
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Watching Youtube
+            <li className="about-activity flex">
+              <ImPointRight className="mr-2 mt-1"/>Lifting Weights
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Lifting Weights
+            <li className="about-activity flex">
+              <ImPointRight className="mr-2 mt-1"/>Teaching Computer Science
             </li>
           </ul>
 
