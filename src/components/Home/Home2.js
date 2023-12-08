@@ -3,9 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  AiFillGithub
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -16,14 +14,14 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              Let me <span className="purple"> introduce</span> myself
             </h1>
             <p className="home-about-body">
               I fell in love with programming when I was 11 years old
               <br />
               <br />Since then, I am fluent in classics like
               <i>
-                <b className="purple"> C++, C#, Java, Javascript and Python. </b>
+                <b className="purple"> Javascript, Python, C#, C++, and Java. </b>
               </i>
               <br />
               <br />
@@ -47,7 +45,7 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js and Svelte</b>
+                <b className="purple"> Next.js and the OpenAI API</b>
               </i>
             </p>
           </Col>
@@ -83,7 +81,7 @@ function Home2() {
               </li>
             </ul>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Feel free to <span className="purple"> connect </span>with me
             </p>
           </Col>
         </Row>
