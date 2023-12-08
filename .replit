@@ -1,6 +1,6 @@
 modules = ["nodejs-20:v8-20230920-bd784b9"]
 hidden = [".config", "package-lock.json"]
-run = "npm run start"
+run = "npm run dev"
 
 [nix]
 channel = "stable-23_05"
@@ -11,5 +11,17 @@ language = "nodejs"
 [deployment]
 deploymentTarget = "static"
 ignorePorts = false
-build = ["sh", "-c", "npm run build"]
+build = ["sh", "-c", "pnpm run build"]
 publicDir = "build"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 40619
+externalPort = 3001
+
+[[ports]]
+localPort = 45651
+externalPort = 3000

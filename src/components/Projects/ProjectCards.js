@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function ProjectCards(props) {
   return (
@@ -27,17 +28,14 @@ function ProjectCards(props) {
         <div className="flex flex-row justify-center align-middle">
           {props.demoLink ? (
             <div className="">
-              <Button
-                variant="primary"
-                href={props.demoLink}
-                target="_blank"
-                className="w-[120px] mt-2"
-              >
-                <div className="flex justify-center align-middle">
-                  <CgWebsite className="m-auto" />
-                  <p className="m-auto">Demo</p>
-                </div>
-              </Button>
+              <Link to="/acdemo">
+                <Button variant="primary" className="w-[120px] mt-2">
+                  <div className="flex justify-center align-middle">
+                    <CgWebsite className="m-auto" />
+                    <p className="m-auto">Demo</p>
+                  </div>
+                </Button>
+              </Link>
             </div>
           ) : (
             <div className="w-[120px]"></div>

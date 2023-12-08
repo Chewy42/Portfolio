@@ -2,9 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -17,11 +15,15 @@ function Home2() {
               Let me <span className="purple"> introduce</span> myself
             </h1>
             <p className="home-about-body">
-              I fell in love with programming when I was 11 years old
+              I fell in love with programming when I was 11 years old.
               <br />
-              <br />Since then, I am fluent in classics like
+              <br />
+              Since then, I am fluent in classics like
               <i>
-                <b className="purple"> Javascript, Python, C#, C++, and Java. </b>
+                <b className="purple">
+                  {" "}
+                  Javascript, Python, C#, C++, and Java.{" "}
+                </b>
               </i>
               <br />
               <br />
@@ -30,7 +32,8 @@ function Home2() {
                 <b className="purple">Web Technologies and Products </b> and
                 also in areas related to{" "}
                 <b className="purple">
-                  Deep Learning, Natural Launguage Processing, and Computer Vision.
+                  Deep Learning, Natural Launguage Processing, and Computer
+                  Vision.
                 </b>
               </i>
               <br />

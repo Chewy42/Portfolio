@@ -295,7 +295,7 @@ button:focus {
 
 .down-arrow:hover {
   cursor: pointer !important;
-  z-index: 100;
+  z-index: 100 !important;
 }
 
 .Typewriter__wrapper {
