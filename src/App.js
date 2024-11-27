@@ -1,46 +1,50 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-
-import ACDemo from "./components/AuthorCopilotExample/ACDemo";
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  const [load, upadateLoad] = useState(true);
+// Lazy load components
+const Home = React.lazy(() => import("./components/Home/Home"));
+const About = React.lazy(() => import("./components/About/About"));
+const Projects = React.lazy(() => import("./components/Projects/Projects"));
+const ACDemo = React.lazy(() => import("./components/AuthorCopilotExample/ACDemo"));
 
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="loading-spinner">
+    <div className="spinner"></div>
+  </div>
+);
+
+function App() {
   useEffect(() => {
+    // Load non-critical CSS after component mounts
     const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './critical.css';
+      link.type = 'text/css';
+      document.head.appendChild(link);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div className="App">
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/acdemo" element={<ACDemo />} />
-          {/* <Route path="/resume" element={<Resume />} /> */}
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/acdemo" element={<ACDemo />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
       </div>
     </Router>
   );

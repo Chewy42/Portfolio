@@ -1,26 +1,29 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
 import { FaArrowDown } from "react-icons/fa";
 import Navbar from "../Navbar";
 
-function Home() {
+// Lazy load components
+const Particle = lazy(() => import("../Particle"));
+const Home2 = lazy(() => import("./Home2"));
+const Type = lazy(() => import("./Type"));
 
+function Home() {
   const scrollTo = () => {
     const element = document.getElementById("about");
-    element.scrollIntoView({
+    element?.scrollIntoView({
       behavior: "smooth",
     });
-  }
+  };
 
   return (
     <section>
       <Container fluid className="home-section" id="home">
-      <Navbar />
-        <Particle />
+        <Navbar />
+        <Suspense fallback={<div className="loading-spinner"><div className="spinner"></div></div>}>
+          <Particle />
+        </Suspense>
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
@@ -37,7 +40,9 @@ function Home() {
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
-                <Type />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Type />
+                </Suspense>
               </div>
             </Col>
 
@@ -47,6 +52,8 @@ function Home() {
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
+                loading="eager"
+                decoding="async"
               />
             </Col>
           </Row>
@@ -55,9 +62,11 @@ function Home() {
           </div>
         </Container>
       </Container>
-      <Home2 />
+      <Suspense fallback={<div className="loading-spinner"><div className="spinner"></div></div>}>
+        <Home2 />
+      </Suspense>
     </section>
   );
 }
 
-export default Home;
+export default React.memo(Home);
