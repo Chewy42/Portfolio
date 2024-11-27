@@ -15,7 +15,7 @@ const About = () => {
       color: "whitesmoke"
     }}>
       <NavBar />
-      <div className="container mx-auto px-4 py-16 max-w-7xl">
+      <div className="container mx-auto px-4 py-24 max-w-7xl">
         <Particle className="absolute inset-0" />
         
         {/* Main Content Container */}
