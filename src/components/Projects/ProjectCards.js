@@ -14,17 +14,21 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button
-          variant="primary"
-          href={props.ghLink}
-          target="_blank"
-          className="w-[120px]"
-        >
-          <div className="flex justify-center align-middle">
-            <BsGithub className="m-auto" />{" "}
-            <p className="m-auto">{props.isBlog ? "Blog" : "GitHub"}</p>
-          </div>
-        </Button>
+        
+        {props.ghLink && (
+          <Button
+            variant="primary"
+            href={props.ghLink}
+            target="_blank"
+            className="w-[120px]"
+          >
+            <div className="flex justify-center align-middle">
+              <BsGithub className="m-auto" />{" "}
+              <p className="m-auto">{props.isBlog ? "Blog" : "GitHub"}</p>
+            </div>
+          </Button>
+        )}
+        
         <div className="flex flex-row justify-center align-middle">
           {props.demoLink ? (
             <div className="">

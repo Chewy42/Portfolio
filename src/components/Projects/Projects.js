@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import authorcopilotscript from "../../Assets/Projects/authorcopilotscript.png";
 import authorcopilot from "../../Assets/Projects/authorcopilot.png";
+import theSuitsReckoning from "../../Assets/Projects/theSuitsReckoning.png"; // Add this import
 import NavBar from "../Navbar";
 
 function Projects() {
@@ -20,6 +21,15 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+                      <ProjectCard
+                        imgPath={theSuitsReckoning}
+                        isBlog={false}
+                        title="The Suits Reckoning"
+                        description="A video game I'm currently developing that combines strategic gameplay with immersive storytelling. Players navigate through corporate intrigue and battles in this unique gaming experience."
+                        demoLink="https://drive.google.com/drive/folders/1fCRunVwo9zvoj149TAgQBSZ90vcK78lx?usp=sharing"
+                      />
+                    </Col>
           <Col md={4} className="project-card flex flex-col justify-center align-middle">
             <ProjectCard
               imgPath={authorcopilot}
@@ -40,6 +50,8 @@ function Projects() {
               ghLink="https://github.com/Chewy42/Author-Copilot-Notebook"
             />
           </Col>
+
+          
         </Row>
       </Container>
     </Container>
