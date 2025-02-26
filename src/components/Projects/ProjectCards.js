@@ -32,14 +32,18 @@ function ProjectCards(props) {
         <div className="flex flex-row justify-center align-middle">
           {props.demoLink ? (
             <div className="">
-              <Link to="/acdemo">
-                <Button variant="primary" className="w-[120px] mt-2">
-                  <div className="flex justify-center align-middle">
-                    <CgWebsite className="m-auto" />
-                    <p className="m-auto">Demo</p>
-                  </div>
-                </Button>
-              </Link>
+              {/* Use Button with href for external links instead of Link component */}
+              <Button 
+                variant="primary" 
+                href={props.demoLink}
+                target="_blank"
+                className="w-[120px] mt-2"
+              >
+                <div className="flex justify-center align-middle">
+                  <CgWebsite className="m-auto" />
+                  <p className="m-auto">Demo</p>
+                </div>
+              </Button>
             </div>
           ) : (
             <div className="w-[120px]"></div>
